@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useDeferredValue } from "react"
 import ReactMde from "react-mde"
 import Showdown from "showdown"
 
 export default function Editor({ currentNote, updateNote }) {
-    console.log(currentNote)
     const [selectedTab, setSelectedTab] = React.useState("write")
 
     const converter = new Showdown.Converter({
